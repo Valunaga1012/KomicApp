@@ -96,8 +96,12 @@
 
   @include medium {
     margin: 0px;
-    .logo img {
-      width: 118px;
+    .logo-content {
+      margin-top: 27px;
+      display: flex;
+      img {
+        width: 118px;
+      }
     }
     padding: 0px $size-20;
     h2 {
