@@ -1,0 +1,48 @@
+<app-komic-header class="header"></app-komic-header>
+<div class="container-login">
+  <div class="content">
+    <komic-card>
+      <div class="social-content">
+        <h3>Continúe Con</h3>
+        <div class="social-icon">
+          <komic-card komicCardSmall>
+            <img src="assets/img/google-icon.svg" />
+          </komic-card>
+          <komic-card komicCardSmall>
+            <img src="assets/img/facebook-icon.svg" />
+          </komic-card>
+          <komic-card komicCardSmall>
+            <img src="assets/img/linkedin-icon.svg" />
+          </komic-card>
+        </div>
+      </div>
+      <hr />
+      <form [formGroup]="loginForm">
+        <div class="form-group">
+          <h3>O Ingrese Con Correo</h3>
+          <div class="input-group">
+            <komic-input
+              formControlName="email"
+              type="text"
+              icon="user-icon"
+              [placeholder]="'CORREO ELECTRÓNICO'"
+              komicInput
+            ></komic-input>
+          </div>
+          <div class="input-group">
+            <komic-input
+              formControlName="password"
+              type="password"
+              icon="padlock-icon"
+              [placeholder]="'CORREO ELECTRÓNICO'"
+              komicInput
+            ></komic-input>
+          </div>
+        </div>
+        <komic-button (click)="login(loginForm.value)" komicButton>
+          INGRESAR
+        </komic-button>
+      </form>
+    </komic-card>
+  </div>
+</div>

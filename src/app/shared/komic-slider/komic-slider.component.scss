@@ -1,0 +1,67 @@
+@use "/src/assets/scss/sizes" as *;
+@use "/src/assets/scss/colors" as *;
+@use "/src/assets/scss/mixins/mixins" as *;
+
+h6 {
+  font-family: "Poppins-SemiBold";
+  margin: 5px 0px 0px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: $size-20;
+  font-family: "Poppins-Bold";
+}
+.modal-detail {
+  display: flex;
+  gap: 20px;
+  .img-content {
+    img {
+      text-align: center;
+      width: 300px;
+      height: 423px;
+      border-radius: $size-10;
+    }
+  }
+  .info-content {
+    margin-top: $size-40;
+    h1 {
+      font-size: $size-40;
+    }
+    .text-published{
+     color: $color--gainsboro;
+    }
+  }
+}
+
+@include medium {
+  .img-content {
+    text-align: center;
+    margin-bottom: $size-10;
+    img {
+      width: 228px;
+      height: 304px;
+    }
+  }
+}
+
+h4 {
+  font-size: 11px;
+  font-family: "Poppins-SemiBold";
+}
+
+p {
+  font-size: 13px;
+  font-family: "Poppins-Regular";
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  text-overflow: ellipsis;
+}
+
+.modal-dialog .modal-lg {
+  max-width: 900px;
+}

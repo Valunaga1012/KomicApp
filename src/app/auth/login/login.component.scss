@@ -1,0 +1,80 @@
+@use "/src/assets/scss/colors" as *;
+@use "/src/assets/scss/mixins/mixins" as *;
+@use "/src/assets/scss/sizes" as *;
+
+.container-login {
+  background: center/cover no-repeat url("./../../../assets/img/marvel.png");
+  background-color: $color-light-gray;
+  .social-content {
+    text-align: center;
+    width: 25rem;
+    padding: $size-48;
+  }
+  form {
+    text-align: center;
+    padding: $size-32 $size-48;
+    .form-group {
+      margin-bottom: $size-40;
+    }
+  }
+  .content {
+    margin: 0rem $size-88;
+    height: 90vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    h3 {
+      font-family: "Poppins-Bold";
+      color: $color--dim-gray;
+      font-size: $size-24;
+      margin-top: 0px;
+    }
+    hr {
+      background: $color--gainsboro;
+      width: 100%;
+    }
+    .input-group {
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .social-icon {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include medium {
+    .header { display: none; }
+    background: $color-light-gray;
+
+    .content {
+      width: 100%;
+      justify-content: center;
+      margin: 0rem;
+
+      h3 {
+        font-size: $size-18;
+        font-family: "Poppins-Regular";
+        margin-bottom: $size-20;
+      }
+
+      .input-group { display: block; }
+
+      .social-content {
+        padding: $size-27;
+        width: 100%;
+        height: 100%;
+      }
+
+      form {
+        padding: $size-27;
+        .form-group { margin-bottom: $size-40; }
+      }
+    }
+  }
+}
+@include medium {
+  .header {
+    display: none;
+  }
+}

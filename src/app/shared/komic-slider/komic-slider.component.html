@@ -1,0 +1,60 @@
+<div *ngIf="items">
+  <swiper
+    class="swiper"
+    slidesPerView="auto"
+    [freeMode]="true"
+    [loop]="false"
+    [spaceBetween]="15"
+  >
+    <ng-template swiperSlide *ngFor="let item of items">
+      <div (click)="openModal(template)">
+        <img
+          [style.width.px]="sliderWidth"
+          [style.height.px]="sliderHeight"
+          [src]="
+            item.thumbnail
+              ? item.thumbnail.path + '.' + item.thumbnail.extension
+              : imgDefault
+          "
+          alt="{{ item.title }}"
+        />
+        <div class="text-overlay">
+          <h6>{{ item.title || item.name }}</h6>
+        </div>
+      </div>
+
+      <ng-template #template>
+        <komic-modal (closeModal)="closeModal()">
+          <div class="modal-detail">
+            <div class="img-content">
+            <img
+              [src]="
+                item.thumbnail
+                  ? item.thumbnail.path + '.' + item.thumbnail.extension
+                  : imgDefault
+              "
+              [alt]="item.title"
+            />
+          </div>
+          <div class="info-content">
+            <h1>{{ item.title }}</h1>
+            <h4>Issue number {{ item.issueNumber }}</h4>
+            <h4 class="text-published">Published {{ item.modified | date }}</h4>
+            <p>
+              {{ item.description ||textDefault }}
+            </p>
+          </div>
+
+          </div>
+
+        </komic-modal>
+      </ng-template>
+    </ng-template>
+  </swiper>
+</div>
+
+<komic-skeleton-swiper
+  [skeletonWidth]="sliderWidth"
+  [skeletonHeight]="sliderHeight"
+  *ngIf="!items"
+></komic-skeleton-swiper>

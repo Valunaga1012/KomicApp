@@ -1,0 +1,72 @@
+@use "/src/assets/scss/colors" as *;
+@use "/src/assets/scss/mixins/mixins" as *;
+@use "/src/assets/scss/sizes" as *;
+
+.container-header {
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background: $color-light-gray;
+  height: 90px;
+  position: fixed;
+  z-index: 200;
+  padding: 0px $size-88;
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .item-header {
+    display: flex;
+    align-items: center;
+    gap: $size-40;
+    .menu-content {
+      display: flex;
+      gap: 5px;
+    }
+    .search-icon {
+      display: none;
+    }
+    img {
+      width: $size-32;
+      height: $size-32;
+    }
+  }
+
+  .search-icon {
+    display: none;
+  }
+}
+
+@include medium {
+  .container-header {
+    padding: 0px;
+    width: 100%;
+    bottom: 0;
+    top: auto;
+    margin: 0px;
+    height: 60px;
+    background: $color-white;
+    h4 {
+      display: none;
+    }
+    .logo {
+      display: none;
+    }
+    .item-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .search-icon {
+        display: flex;
+      }
+      img {
+        width: $size-32;
+        height: $size-32;
+      }
+    }
+  }
+}
+
+

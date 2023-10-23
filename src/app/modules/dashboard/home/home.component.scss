@@ -1,0 +1,12 @@
+@use '/src/assets/scss/mixins/mixins' as *;
+@use "/src/assets/scss/sizes" as *;
+
+.container-home{
+  margin: 8.6rem 0rem $size-88;
+}
+
+@include medium {
+  .container-home{
+    margin: 0px 0rem  $size-88;
+  }
+}

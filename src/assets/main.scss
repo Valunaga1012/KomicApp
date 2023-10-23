@@ -1,0 +1,26 @@
+@use './scss/colors'as *;
+@use './scss/font-face';
+@use './scss/card';
+@use './scss/input';
+@use './scss/button';
+@use './scss/swiper.scss';
+@use './scss/sizes';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import 'swiper/css/autoplay';
+
+body{
+  margin: 0px;
+  background-color: $color-light-gray !important;
+  font-family: 'Poppins-thin';
+}
+
+
+
+
+.swiper-slide { flex-shrink: 1; width: auto;}
+.modal-dialog  {
+  top: 50%;
+  transform: translateY(-50%) !important;
+}

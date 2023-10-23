@@ -1,0 +1,47 @@
+<div class="container-characters">
+  <div class="logo">
+    <img src="assets/img/logo.svg" alt="logo" />
+  </div>
+
+  <div class="search">
+    <input [(ngModel)]="searchTerm" placeholder="SEARCH CHARACTERS" type="search" (change)="getChararecters()" />
+  </div>
+
+  <div *ngIf="chararecterData">
+    <div class="characters-order">
+      <h3>{{ limit }} resultados</h3>
+      <select [(ngModel)]="alphabeticalOrder" (change)="getChararecters()">
+        <option value="name" selected>A-Z</option>
+        <option value="-name">Z-A</option>
+      </select>
+    </div>
+
+    <div class="characters-list" *ngIf="chararecterData">
+      <div
+        class="character"
+        (click)="characterDetail(item.id)"
+        *ngFor="let item of chararecterData?.results; let i = index"
+      >
+        <div class="heart-icon">
+          <img  src="assets/img/like-icon.svg" alt="like-icon"/>
+        </div>
+        <img
+          [src]="item.thumbnail.path + '.' + item.thumbnail.extension"
+          alt="{{ item.title }}"
+        />
+        <div class="text-overlay">
+          <h6>{{ item.name }}</h6>
+        </div>
+      </div>
+    </div>
+
+    <komic-paginator
+      (pageChange)="getChararecters($event)"
+      [data]="chararecterData"
+      [limit]="limit"
+      [currentPage]="currentPage"
+    ></komic-paginator>
+  </div>
+  <komic-skeleton *ngIf="!chararecterData"></komic-skeleton>
+</div>
+

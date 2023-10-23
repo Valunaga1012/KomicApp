@@ -1,0 +1,10 @@
+<div class="icon-input-group">
+  <input
+    [type]="type"
+    [class.is-invalid]="isInvalid"
+    [value]="value"
+    [placeholder]="placeholder"
+    (blur)="onInputBlur($event)"
+  />
+  <img [src]="'assets/img/' + icon + '.svg'" />
+</div>

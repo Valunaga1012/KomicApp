@@ -1,0 +1,38 @@
+<div>
+  <div class="carousel-container">
+    <komic-carousel [data]="charecterList"></komic-carousel>
+  </div>
+
+  <div class="slider-container">
+    <div class="slider">
+      <h2>COMICS</h2>
+      <komic-slider
+        endpoint="/characters/{{ chararecterId }}/comics"
+      ></komic-slider>
+    </div>
+    <hr />
+    <div class="slider">
+      <h2>SERIES</h2>
+      <komic-slider
+        sliderWidth="260"
+        sliderHeight="143"
+        [data]="charecterList"
+        endpoint="/characters/{{ chararecterId }}/series"
+      ></komic-slider>
+    </div>
+    <hr />
+    <div class="slider">
+      <h2>STORIES</h2>
+      <komic-slider
+        sliderWidth="192"
+        sliderHeight="103"
+        endpoint="/characters/{{ chararecterId }}/stories"
+      ></komic-slider>
+    </div>
+  </div>
+
+  <div class="characters-container">
+    <h2>OTHER CHARACTERS</h2>
+    <komic-slider komicSwiperOpacity endpoint="/characters"></komic-slider>
+  </div>
+</div>

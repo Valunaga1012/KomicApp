@@ -1,0 +1,121 @@
+@use "/src/assets/scss/colors" as *;
+@use "/src/assets/scss/mixins/mixins" as *;
+@use "/src/assets/scss/sizes" as *;
+
+.carousel-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  .img-container {
+    width: 80%;
+    height: 38.3rem;
+
+    img {
+      width: 90%;
+      height: 100%;
+      border-radius: $size-18;
+    }
+  }
+
+  .card-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .card-carousel {
+      padding: 1.69rem 3.75rem;
+      text-overflow: ellipsis;
+
+      .img-card {
+        display: flex;
+        justify-content: end;
+
+        img {
+          width: 3.31rem;
+          height: 3.9rem;
+          margin-left: $size-10;
+        }
+      }
+    }
+
+    h1 {
+      text-align: left;
+      line-height: 1;
+      font-size: 3rem;
+      font-family: "Poppins-Bold";
+      margin-bottom: $size-10;
+      color: $color-dark-gray;
+      margin-top: $size-10;
+    }
+
+    span {
+      text-align: left;
+      font-family: "Poppins-SemiBold";
+      color: #0090ef;
+      font-size: 11px;
+    }
+
+    p {
+      text-align: left;
+      font-family: "Poppins-Regular";
+      font-size: 1rem;
+      color: $color-dark-gray;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      text-overflow: ellipsis;
+      margin: 5px;
+    }
+  }
+
+  @include medium {
+    display: block;
+
+    .card-container {
+      width: 90%;
+      height: 90%;
+      justify-content: center;
+      position: relative;
+      margin: -$size-20 $size-20 0px;
+      .card-carousel {
+        padding: 1rem;
+        text-overflow: ellipsis;
+
+        .img-card {
+          display: flex;
+          justify-content: left;
+
+          img {
+            width: 1.5rem;
+            height: 1.75rem;
+            margin-left: 0rem;
+            margin-right: $size-10;
+          }
+        }
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      p {
+        font-size: 0.81rem;
+        margin: 0rem;
+      }
+    }
+    .img-container {
+      width: 100%;
+      height: 20.3rem;
+      img {
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use './colors' as *;
+
+button{
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.375rem 0.75rem;
+  border-radius: 27px;
+  border: none;
+  box-shadow: 0px 10px 30px #393B442C;
+  color: $color-white;
+  font-family: 'Poppins-SemiBold';
+  cursor: pointer;
+}
+.komic-button{
+
+  &--primary {
+    button{
+     @extend button;
+     width: 18rem;
+     padding: 0.8rem;
+     background: $color--red;
+     &:focus {
+      background: $color--dark-red;
+    }
+    }
+
+  }
+}

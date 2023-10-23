@@ -1,0 +1,27 @@
+@use "./colors" as *;
+
+.img {
+  position: absolute;
+  padding: 11.5px;;
+  padding-left: 16px;
+  left: 0;
+}
+
+.komic-input {
+  input {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 11.5px;
+    border-color: transparent;
+    background: $color-light-gray;
+    padding: 16px 16px 16px 47px;;
+    &:focus {
+      outline: solid $color-dark-gray;
+    }
+  }
+  img{
+     @extend .img;
+  }
+
+}

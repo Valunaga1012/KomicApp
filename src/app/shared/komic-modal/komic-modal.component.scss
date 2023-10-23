@@ -1,0 +1,11 @@
+@use "/src/assets/scss/sizes" as *;
+@use "/src/assets/scss/sizes" as *;
+
+.card-container {
+  padding: 28px;
+  width: 100%;
+  .icon-content {
+    display: flex;
+    justify-content: end;
+  }
+}
