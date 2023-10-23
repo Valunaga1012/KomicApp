@@ -1,7 +1,8 @@
-
 @use "/src/assets/scss/colors" as *;
 @use "/src/assets/scss/sizes" as *;
-.swiper-skeleton{
+@use "/src/assets/scss/mixins/mixins" as *;
+
+.swiper-skeleton {
   display: flex;
   animation: animation1 1s infinite;
   flex-wrap: wrap;
@@ -11,6 +12,12 @@
     height: 256px;
     border-radius: $size-10;
     background: #393b442c;
+  }
+  @include medium {
+    .img-content {
+      width: 163px;
+      height: 231px;
+    }
   }
 }
 
@@ -34,5 +41,12 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@include medium {
+  .img-content {
+    width: 163px;
+    height: 231px;
   }
 }

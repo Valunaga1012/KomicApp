@@ -12,7 +12,6 @@ import { TEXT_DEFAULT } from 'src/app/core/constants/text-default';
 })
 export class KomicSliderComponent {
   @Input() endpoint!: string;
-  @Input() data: any;
   @Input() sliderHeight!: string;
   @Input() sliderWidth!: string;
 

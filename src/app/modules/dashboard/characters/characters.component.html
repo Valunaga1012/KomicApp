@@ -7,7 +7,7 @@
     <input [(ngModel)]="searchTerm" placeholder="SEARCH CHARACTERS" type="search" (change)="getChararecters()" />
   </div>
 
-  <div *ngIf="chararecterData">
+  <!-- <div *ngIf="chararecterData">
     <div class="characters-order">
       <h3>{{ limit }} resultados</h3>
       <select [(ngModel)]="alphabeticalOrder" (change)="getChararecters()">
@@ -41,7 +41,7 @@
       [limit]="limit"
       [currentPage]="currentPage"
     ></komic-paginator>
-  </div>
-  <komic-skeleton *ngIf="!chararecterData"></komic-skeleton>
+  </div> -->
+  <komic-skeleton *ngIf="chararecterData"></komic-skeleton>
 </div>
 
