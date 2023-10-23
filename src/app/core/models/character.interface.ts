@@ -21,7 +21,7 @@ export interface CharacterResults {
   description: string;
   id: number;
   modified: string;
-  name: string;
+  name?: string;
   title?: string;
   resourceURI: string;
   series: Comics

@@ -2,15 +2,15 @@
   <div class="img-container">
     <img
       [src]="data.thumbnail.path + '.' + data.thumbnail.extension"
-      alt="{{ data?.name }}"
+      alt="{{ data.name }}"
     />
   </div>
   <div class="card-container">
     <komic-card komicCard>
       <div class="card-carousel">
         <div class="img-card">
-          <img src="assets/img/upload.svg" alt="" />
-          <img src="assets/img/heart.svg" alt="" />
+          <img src="assets/img/upload.svg" alt="upload" />
+          <img src="assets/img/heart.svg" alt="heart" />
         </div>
         <h1>{{ data.name }}</h1>
         <span>{{ data.modified | date }}</span>
