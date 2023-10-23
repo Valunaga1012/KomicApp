@@ -29,19 +29,28 @@ h1 {
     h1 {
       font-size: $size-40;
     }
-    .text-published{
-     color: $color--gainsboro;
+    .text-published {
+      color: $color--gainsboro;
     }
   }
 }
 
 @include medium {
-  .img-content {
-    text-align: center;
-    margin-bottom: $size-10;
-    img {
-      width: 228px;
-      height: 304px;
+  .modal-detail {
+    display: block;
+    .img-content {
+      text-align: center;
+      margin-bottom: $size-10;
+      img {
+        width: 228px;
+        height: 304px;
+      }
+    }
+
+    .info-content {
+      h1 {
+        font-size: 30px;
+      }
     }
   }
 }
